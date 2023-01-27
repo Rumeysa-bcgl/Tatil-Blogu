@@ -1,0 +1,109 @@
+﻿@using Tatil_sitesi.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_testLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px;">Tatil & Seyahat Bloğum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restaurantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak Şeyler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:650px; height:365px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach(var x in Model)
+                                { 
+                                <li><img src="@x.BlogImage" alt=""></li>
+                                @*<li><img src="~/web/images/img2.jpg" alt=""></li>
+                                <li><img src="~/web/images/img3.jpg" alt=""></li>
+                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğuma Hoşgeldiniz!</h3>
+                    <p>Seyahat etmeyi seviyor ve sık sık seyahate çıkıyorsanız başvurabileceğiniz kaynakları 
+                    çoktan keşfetmişsinizdir muhtemelen. Ancak seyahat konusunda henüz yeterli deneyiminiz 
+                    yoksa ve üstelik de dünya turuna çıkacağım diyorsanız oldukça çok bilgiye ihtiyacınız
+                    olacağı kesin. Dünya turu nedir, nasıl seyahat edilir, ekonomik gezebilir miyim, hangi 
+                    ülkelere gitmeliyim, rotamı nasıl belirlemeliyim, nasıl ucuza konaklarım, paramı nasıl
+                    taşırım, vize bilgilerini nereden bulabilir, zamanı ve parayı daha verimli nasıl kullanırım…
+                    gibi sorular aklınızı kurcalıyorsa doğru yerdesiniz.</p>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        @Html.Action("Partial4","Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
